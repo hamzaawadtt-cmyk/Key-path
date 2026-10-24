@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="KeyPath منصة تعليمية مجانية لتعلّم الطباعة السريعة بالعربية والإنجليزية، وتحسين الدقة والسرعة عبر دروس تفاعلية وتتبع التقدم."
+    />
+    <meta
+      name="keywords"
+      content="KeyPath, تعلم الطباعة, الطباعة السريعة, تعليم الكتابة, typing practice, typing lessons, Arabic typing, English typing"
+    />
+    <meta name="author" content="KeyPath" />
+    <meta name="theme-color" content="#f5f7fb" />
+    <meta name="api-base-url" content="" />
+    <link rel="canonical" href="https://keypath.netlify.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="KeyPath" />
+    <meta
+      property="og:title"
+      content="KeyPath | تعلم واحتراف الطباعة السريعة"
+    />
+    <meta
+      property="og:description"
+      content="تعلّم الطباعة السريعة بالعربية والإنجليزية مع دروس تفاعلية، وتابع تقدمك وحسّن دقتك وسرعتك."
+    />
+    <meta property="og:url" content="https://keypath.netlify.app/" />
+    <meta property="og:locale" content="ar_AR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="KeyPath | تعلم واحتراف الطباعة السريعة"
+    />
+    <meta
+      name="twitter:description"
+      content="تعلّم الطباعة السريعة بالعربية والإنجليزية مع دروس تفاعلية، وتابع تقدمك وحسّن دقتك وسرعتك."
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "KeyPath",
+        "url": "https://keypath.netlify.app/",
+        "description": "منصة تعليمية تفاعلية مجانية لتعلّم الطباعة السريعة بالعربية والإنجليزية وتحسين دقة الكتابة.",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Any",
+        "inLanguage": ["ar", "en"],
+        "isAccessibleForFree": true,
+        "browserRequirements": "Requires JavaScript and a modern web browser",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
+    <title>KeyPath | تعلم واحتراف الطباعة السريعة</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Tajawal:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="auth-screen" id="auth-screen">
+      <div class="auth-top-controls">
+        <button
+          class="appearance-toggle"
+          id="auth-theme-toggle"
+          type="button"
+          aria-label="Switch to dark mode"
+        >
+          <span aria-hidden="true">☾</span>
+        </button>
+        <button
+          class="language-toggle"
+          id="auth-language-toggle"
+          type="button"
+          lang="ar"
+        >
+          العربية
+        </button>
+      </div>
+      <section class="auth-card" aria-labelledby="auth-title">
+        <a class="brand auth-brand" href="#" aria-label="KeyPath home">
+          <span class="brand-mark" aria-hidden="true">K</span>
+          <span>Key<span class="brand-light">Path</span></span>
+        </a>
+        <div class="auth-intro">
+          <p class="eyebrow" data-i18n="authEyebrow">
+            YOUR TYPING JOURNEY STARTS HERE
+          </p>
+          <h1 id="auth-title" data-i18n="authTitle">Welcome back</h1>
+          <p data-i18n="authDescription">
+            Sign in to save your progress and keep learning.
+          </p>
+        </div>
+        <div class="oauth-buttons">
+          <button class="oauth-button" type="button" data-provider="Google">
+            <svg viewBox="0 0 48 48" aria-hidden="true">
+              <path
+                fill="#EA4335"
+                d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5Z"
+              />
+              <path
+                fill="#4285F4"
+                d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.76 7.18l7.73 6C44.43 38.02 47 31.9 47 24.55Z"
+              />
+              <path
+                fill="#FBBC05"
+                d="M10.53 28.59A14.4 14.4 0 0 1 9.75 24c0-1.59.27-3.13.76-4.59l-7.98-6.19A23.94 23.94 0 0 0 0 24c0 3.88.93 7.55 2.56 10.78l7.97-6.19Z"
+              />
+              <path
+                fill="#34A853"
+                d="M24 48c6.48 0 11.93-2.13 15.91-5.8l-7.73-6c-2.15 1.45-4.92 2.3-8.18 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48Z"
+              /></svg
+            ><span data-i18n="googleButton">Continue with Google</span>
+          </button>
+          <button class="oauth-button" type="button" data-provider="Microsoft">
+            <svg viewBox="0 0 23 23" aria-hidden="true">
+              <path fill="#f25022" d="M1 1h10v10H1z" />
+              <path fill="#7fba00" d="M12 1h10v10H12z" />
+              <path fill="#00a4ef" d="M1 12h10v10H1z" />
+              <path fill="#ffb900" d="M12 12h10v10H12z" /></svg
+            ><span data-i18n="microsoftButton">Continue with Microsoft</span>
+          </button>
+        </div>
+        <div class="auth-divider">
+          <span data-i18n="orContinue">or continue with email</span>
+        </div>
+        <form class="auth-form" id="auth-form">
+          <label
+            for="auth-name"
+            id="name-label"
+            data-i18n="nameLabel"
+            class="hidden"
+            >Your name</label
+          >
+          <input
+            id="auth-name"
+            name="name"
+            type="text"
+            autocomplete="name"
+            class="hidden"
+            data-i18n-placeholder="namePlaceholder"
+            placeholder="Your name"
+          />
+          <label for="auth-email" data-i18n="emailLabel">Email address</label>
+          <input
+            id="auth-email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            required
+            data-i18n-placeholder="emailPlaceholder"
+            placeholder="you@example.com"
+          />
+          <label for="auth-password" data-i18n="passwordLabel">Password</label>
+          <div class="password-field">
+            <input
+              id="auth-password"
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              minlength="8"
+              required
+              data-i18n-placeholder="passwordPlaceholder"
+              placeholder="Enter your password"
+            /><button
+              id="password-toggle"
+              type="button"
+              aria-label="Show password"
+              data-i18n-aria="showPassword"
+            >
+              Show
+            </button>
+          </div>
+          <p
+            class="auth-feedback"
+            id="auth-feedback"
+            role="status"
+            aria-live="polite"
+          ></p>
+          <button
+            class="primary-button auth-submit"
+            id="auth-submit"
+            type="submit"
+            data-i18n="signInButton"
+          >
+            Sign in
+          </button>
+        </form>
+        <p class="auth-switch">
+          <span id="auth-switch-copy" data-i18n="noAccount"
+            >Don't have an account?</span
+          >
+          <button type="button" id="auth-mode-toggle" data-i18n="createAccount">
+            Create account
+          </button>
+        </p>
+        <p class="auth-notice" data-i18n="authNotice">
+          Google and Microsoft sign-in need OAuth provider credentials. Email
+          passwords are securely hashed by the backend.
+        </p>
+      </section>
+      <p class="auth-footer" data-i18n="authFooter">
+        Practice a little. Improve a lot.
+      </p>
+    </main>
+    <div class="app-shell hidden" id="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="KeyPath home">
+          <span class="brand-mark" aria-hidden="true">K</span>
+          <span>Key<span class="brand-light">Path</span></span>
+        </a>
+        <nav
+          class="top-nav"
+          aria-label="Main navigation"
+          data-i18n-aria="navMain"
+        >
+          <a class="nav-link active" href="#home" data-i18n="navPath">Path</a>
+          <a class="nav-link" href="#practice" data-i18n="navPractice"
+            >Practice</a
+          >
+        </nav>
+        <div class="top-stats">
+          <div class="streak-pill" title="XP earned">
+            <span aria-hidden="true">✦</span><span id="xp-count">0 XP</span>
+          </div>
+          <div class="avatar" aria-label="Learner account" id="avatar">K</div>
+          <button
+            class="appearance-toggle"
+            id="theme-toggle"
+            type="button"
+            aria-label="Switch to dark mode"
+          >
+            <span aria-hidden="true">☾</span>
+          </button>
+          <button
+            class="language-toggle"
+            id="language-toggle"
+            type="button"
+            lang="ar"
+          >
+            العربية
+          </button>
+          <button
+            class="signout-button"
+            id="signout-button"
+            type="button"
+            data-i18n="signOut"
+          >
+            Sign out
+          </button>
+        </div>
+      </header>
+
+      <main id="home" class="page-content">
+        <section class="welcome-row">
+          <div>
+            <p class="eyebrow">
+              <span class="eyebrow-dot"></span
+              ><span data-i18n="welcomeEyebrow">YOUR JOURNEY STARTS HERE</span>
+            </p>
+            <h1 data-i18n="welcomeTitle">
+              Every keystroke brings you closer to your goal.
+            </h1>
+            <p class="welcome-copy" data-i18n="welcomeCopy">
+              Practice typing in Arabic, one step at a time. Focus on accuracy
+              first; speed will follow.
+            </p>
+          </div>
+          <div class="daily-goal-card">
+            <div class="goal-icon" aria-hidden="true">✦</div>
+            <div class="goal-text">
+              <span data-i18n="dailyGoal">Today's goal</span
+              ><strong id="daily-goal-value">0 / 3 lessons</strong>
+            </div>
+            <div class="goal-ring" id="goal-ring">
+              <span id="goal-percent">0%</span>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="overview-grid"
+          aria-label="Progress overview"
+          data-i18n-aria="progressOverview"
+        >
+          <article class="overview-card progress-overview">
+            <div class="card-heading">
+              <span data-i18n="pathProgress">Your path progress</span
+              ><span class="subtle-icon" aria-hidden="true">↗</span>
+            </div>
+            <div class="progress-numbers">
+              <strong id="progress-label">0%</strong
+              ><span id="completed-label">0 of 8 lessons</span>
+            </div>
+            <div class="progress-track">
+              <span id="overall-progress"></span>
+            </div>
+            <p data-i18n="progressEncouragement">
+              Keep going, you're building a great habit 👏
+            </p>
+          </article>
+          <article class="overview-card speed-overview">
+            <div class="card-heading">
+              <span data-i18n="bestSpeed">Your best speed</span
+              ><span class="stat-icon purple" aria-hidden="true">⌁</span>
+            </div>
+            <div class="big-stat">
+              <strong id="best-speed">—</strong
+              ><span data-i18n="wordsPerMinute">words / min</span>
+            </div>
+            <p data-i18n="newRecord">Set a new record in your next lesson</p>
+          </article>
+          <article class="overview-card accuracy-overview">
+            <div class="card-heading">
+              <span data-i18n="avgAccuracy">Average accuracy</span
+              ><span class="stat-icon green" aria-hidden="true">✓</span>
+            </div>
+            <div class="big-stat">
+              <strong id="average-accuracy">—</strong
+              ><span data-i18n="typingAccuracy">typing accuracy</span>
+            </div>
+            <p data-i18n="accuracyTip">High accuracy builds a faster typist</p>
+          </article>
+          <article class="overview-card time-overview">
+            <div class="card-heading">
+              <span data-i18n="totalPractice">Total practice</span
+              ><span class="stat-icon purple" aria-hidden="true">◷</span>
+            </div>
+            <div class="big-stat">
+              <strong id="total-practice-time">0</strong
+              ><span data-i18n="minutesPracticed">minutes practiced</span>
+            </div>
+            <p data-i18n="practiceTimeTip">Every minute helps you improve</p>
+          </article>
+        </section>
+
+        <section id="practice" class="course-section">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow" data-i18n="levelOne">LEVEL 1 · THE BASICS</p>
+              <h2 data-i18n="learningPath">Your typing path</h2>
+            </div>
+            <span class="lesson-count"
+              ><span aria-hidden="true">◈</span>
+              <span data-i18n="lessonCount">8 short lessons</span></span
+            >
+          </div>
+          <div class="course-layout">
+            <div
+              class="lesson-list"
+              id="lesson-list"
+              aria-label="Learning stages"
+              data-i18n-aria="learningStages"
+            ></div>
+            <aside class="journey-card">
+              <div class="journey-art" aria-hidden="true">
+                <span class="art-spark spark-one">✦</span
+                ><span class="art-spark spark-two">✧</span>
+                <div class="art-key key-one">ض</div>
+                <div class="art-key key-two">ش</div>
+                <div class="art-key key-three">س</div>
+                <div class="art-plant">✳</div>
+              </div>
+              <p class="eyebrow" data-i18n="smallTip">A LITTLE TIP</p>
+              <h3 data-i18n="tipTitle">Calm is better than speed</h3>
+              <p data-i18n="tipCopy">
+                Sit comfortably and keep your eyes on the text, not the
+                keyboard. Your fingers will learn the way.
+              </p>
+              <div class="tip-footer">
+                <span aria-hidden="true">⌨</span
+                ><span data-i18n="tipFooter">Practice 5 minutes every day</span>
+              </div>
+            </aside>
+          </div>
+        </section>
+        <section class="innovation-lab" aria-labelledby="code-lab-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow" data-feature="labEyebrow">
+                CODE SPELL SANDBOX
+              </p>
+              <h2 id="code-lab-title" data-feature="labTitle">
+                Make your code come alive
+              </h2>
+            </div>
+            <span class="lesson-count" data-feature="labBadge"
+              >Safe, instant preview</span
+            >
+          </div>
+          <div class="code-lab-card">
+            <div class="code-lab-editor">
+              <label for="code-challenge" data-feature="chooseSpell"
+                >Choose a mini spell</label
+              >
+              <select id="code-challenge">
+                <option value="js">JavaScript · Glow</option>
+                <option value="html">HTML · Star button</option>
+                <option value="python">Python · Star loop</option>
+              </select>
+              <pre
+                class="code-reference"
+                id="code-reference"
+                aria-label="Code challenge"
+              ></pre>
+              <label
+                class="sr-only"
+                for="code-input"
+                data-feature="codeInputLabel"
+                >Type the code shown above</label
+              >
+              <textarea
+                id="code-input"
+                rows="3"
+                spellcheck="false"
+                autocapitalize="off"
+                autocomplete="off"
+              ></textarea>
+              <div class="code-lab-actions">
+                <button
+                  class="primary-button"
+                  id="cast-spell"
+                  type="button"
+                  data-feature="castSpell"
+                >
+                  Run safe preview
+                </button>
+                <p
+                  id="code-feedback"
+                  role="status"
+                  aria-live="polite"
+                  data-feature="codeHint"
+                >
+                  Type the exact snippet to activate its visual preview.
+                </p>
+              </div>
+            </div>
+            <div
+              class="spell-preview"
+              id="spell-preview"
+              aria-label="Code preview"
+            >
+              <div class="spell-orb" id="spell-orb" aria-hidden="true">✦</div>
+              <strong id="spell-output" data-feature="previewReady"
+                >Your preview will appear here</strong
+              >
+            </div>
+          </div>
+        </section>
+        <section class="history-section" aria-labelledby="history-title">
+          <h2 id="history-title" data-i18n="historyTitle">Recent practice</h2>
+          <ul class="history-list" id="history-list" aria-live="polite"></ul>
+          <p class="history-empty" id="history-empty" data-i18n="emptyHistory">
+            Your completed practice sessions will appear here.
+          </p>
+        </section>
+      </main>
+
+      <main id="lesson-screen" class="lesson-screen hidden">
+        <div class="lesson-topline">
+          <button class="back-button" id="back-button" type="button">
+            <span aria-hidden="true">→</span>
+            <span data-i18n="backToPath">Back to path</span>
+          </button>
+          <div class="lesson-breadcrumb">
+            <span data-i18n="levelOneShort">Level 1</span
+            ><span aria-hidden="true">/</span
+            ><strong id="lesson-breadcrumb-title">Lesson 01</strong>
+          </div>
+          <button
+            class="sound-button"
+            id="sound-toggle"
+            type="button"
+            aria-pressed="false"
+          >
+            <span aria-hidden="true">♫</span>
+            <span id="sound-label" data-i18n="soundOff">Sound off</span>
+          </button>
+          <button
+            class="sound-button ambient-toggle"
+            id="ambient-toggle"
+            type="button"
+            aria-pressed="false"
+          >
+            <span aria-hidden="true">♪</span>
+            <span id="ambient-label" data-feature="ambientOff"
+              >Ambient off</span
+            >
+          </button>
+        </div>
+        <div class="lesson-heading">
+          <div>
+            <p class="eyebrow" id="lesson-eyebrow">LESSON 01 · HOME ROW</p>
+            <h1 id="lesson-title">Start with the home row</h1>
+          </div>
+          <div class="lesson-xp">
+            <span aria-hidden="true">✦</span>
+            <span data-i18n="lessonReward">Lesson reward</span>
+            <strong id="lesson-xp-value">+20 XP</strong>
+          </div>
+        </div>
+        <div class="lesson-layout">
+          <section class="typing-panel">
+            <div class="typing-panel-top">
+              <div>
+                <span class="panel-label" data-i18n="typeFollowing"
+                  >Type the following text</span
+                ><span class="panel-subtitle" data-i18n="useArabicKeyboard"
+                  >Use the matching keyboard layout</span
+                >
+              </div>
+              <button
+                class="restart-button"
+                id="restart-button"
+                type="button"
+                aria-label="Restart lesson"
+                data-i18n-aria="restartLesson"
+              >
+                ↻ <span data-i18n="restart">Restart</span>
+              </button>
+            </div>
+            <div
+              class="typing-target"
+              id="typing-target"
+              dir="rtl"
+              aria-live="polite"
+            ></div>
+            <label
+              class="sr-only"
+              for="typing-input"
+              data-i18n="typingInputLabel"
+              >Type the text shown here</label
+            >
+            <textarea
+              id="typing-input"
+              class="typing-input"
+              rows="3"
+              placeholder="Click here and start typing..."
+              data-i18n-placeholder="typingPlaceholder"
+              autocomplete="off"
+              autocapitalize="off"
+              spellcheck="false"
+              dir="rtl"
+            ></textarea>
+            <div class="typing-footer">
+              <span
+                ><span class="live-dot"></span>
+                <span id="typing-status">Ready when you are</span></span
+              ><span id="character-count">0 / 0 characters</span>
+            </div>
+            <div class="keyboard-wrap">
+              <div class="keyboard-heading">
+                <span data-i18n="keyboardTip"
+                  >Remember: don't look at the keyboard</span
+                ><span>⌨</span>
+              </div>
+              <div class="keyboard" id="keyboard" aria-hidden="true"></div>
+            </div>
+          </section>
+          <aside class="lesson-sidebar">
+            <div class="metrics-card">
+              <p class="sidebar-title" data-i18n="liveStats">Your live stats</p>
+              <div class="metric-row">
+                <span data-i18n="speed">Speed</span
+                ><strong
+                  ><span id="live-speed">0</span
+                  ><small data-i18n="wpm"> wpm</small></strong
+                >
+              </div>
+              <div class="metric-row">
+                <span data-i18n="accuracy">Accuracy</span
+                ><strong
+                  ><span id="live-accuracy">100</span><small>%</small></strong
+                >
+              </div>
+              <div class="metric-row">
+                <span data-i18n="time">Time</span
+                ><strong id="live-time">00:00</strong>
+              </div>
+              <div class="metric-row">
+                <span data-i18n="errors">Errors</span
+                ><strong id="live-errors">0</strong>
+              </div>
+            </div>
+            <div class="ghost-card" id="ghost-card" aria-live="polite">
+              <div class="challenge-top">
+                <span aria-hidden="true">👻</span
+                ><span data-feature="ghostTitle">Weakness Ghost Twin</span>
+              </div>
+              <p id="ghost-message" data-feature="ghostEmpty">
+                The ghost learns from your practice and adapts to tricky keys.
+              </p>
+              <div class="ghost-track" aria-hidden="true">
+                <span id="ghost-progress"></span>
+              </div>
+              <small id="ghost-detail" data-feature="ghostReady"
+                >Finish a lesson to start your rival's challenge.</small
+              >
+            </div>
+            <div
+              class="fatigue-nudge hidden"
+              id="fatigue-nudge"
+              role="status"
+              aria-live="polite"
+            >
+              <strong data-feature="breakTitle">Time for a tiny reset?</strong>
+              <p data-feature="breakCopy">
+                Pause, relax your hands, and gently stretch your fingers. This
+                is a comfort reminder, not a medical assessment.
+              </p>
+              <button
+                id="dismiss-break"
+                type="button"
+                data-feature="dismissBreak"
+              >
+                I’m ready
+              </button>
+            </div>
+            <div class="focus-card">
+              <div class="focus-heading">
+                <span class="focus-icon" aria-hidden="true">◎</span>
+                <div>
+                  <span class="sidebar-title" data-i18n="lessonFocus"
+                    >Lesson focus</span
+                  ><strong id="focus-title">Learn the keys</strong>
+                </div>
+              </div>
+              <p id="focus-description"></p>
+              <div class="focus-keys" id="focus-keys" dir="rtl"></div>
+            </div>
+            <div class="challenge-card">
+              <div class="challenge-top">
+                <span aria-hidden="true">⚡</span
+                ><span data-i18n="bonusChallenge">Bonus challenge</span>
+              </div>
+              <p id="challenge-description"></p>
+              <div class="challenge-reward">
+                <span data-i18n="reward">Reward</span>
+                <strong id="challenge-reward">+10 XP</strong>
+              </div>
+            </div>
+            <button
+              class="finish-button"
+              id="finish-button"
+              type="button"
+              disabled
+            >
+              <span data-i18n="finishFirst">Finish typing first</span>
+              <span aria-hidden="true">←</span>
+            </button>
+            <p class="finish-hint" data-i18n="finishHint">
+              Complete the text with at least 80% accuracy to unlock the next
+              lesson
+            </p>
+          </aside>
+        </div>
+      </main>
+
+      <div class="toast" id="toast" role="status" aria-live="polite"></div>
+      <div
+        class="modal-backdrop hidden"
+        id="result-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="result-title"
+      >
+        <div class="result-card">
+          <div class="result-confetti" aria-hidden="true">✦</div>
+          <button
+            class="modal-close"
+            id="modal-close"
+            type="button"
+            aria-label="Close"
+            data-i18n-aria="close"
+          >
+            ×
+          </button>
+          <div class="result-badge" id="result-badge" aria-hidden="true">✓</div>
+          <p class="eyebrow" id="result-eyebrow">Great job!</p>
+          <h2 id="result-title">Lesson complete</h2>
+          <p class="result-copy" id="result-copy"></p>
+          <div
+            class="result-stars"
+            id="result-stars"
+            role="img"
+            aria-label="0 of 3 stars"
+          >
+            ☆☆☆
+          </div>
+          <div class="result-stats">
+            <div>
+              <strong id="result-speed">0</strong
+              ><span data-i18n="wpmLong">words per minute</span>
+            </div>
+            <div>
+              <strong id="result-accuracy">100%</strong
+              ><span data-i18n="accuracy">Accuracy</span>
+            </div>
+            <div>
+              <strong id="result-xp">+20</strong
+              ><span data-i18n="experience">XP earned</span>
+            </div>
+          </div>
+          <div class="result-actions">
+            <button
+              class="primary-button"
+              id="next-lesson-button"
+              type="button"
+            >
+              Next lesson <span aria-hidden="true">←</span></button
+            ><button
+              class="secondary-button"
+              id="result-home-button"
+              type="button"
+              data-i18n="backToPath"
+            >
+              Back to path
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
